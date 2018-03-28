@@ -1,4 +1,6 @@
 class WelcomesController < ApplicationController
+  layout 'resume'
+
   def index
     @educations = Education.all.order(weight: :desc)
     @skills = Skill.all.order(weight: :desc)
